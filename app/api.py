@@ -3,8 +3,8 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/hello/{name}", response_model=dict)
-async def hello(name: str):
+@app.get("/hola/{nombre}", response_model=dict)
+async def hello(nombre: str):
     """
     Saluda a la persona con el nombre proporcionado.
 
@@ -15,5 +15,5 @@ async def hello(name: str):
         dict: Un diccionario que contiene el nombre saludo.
     """
     return {
-        "name": name
+        "nombre": nombre
     }
